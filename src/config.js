@@ -1,6 +1,6 @@
 module.exports = {
     client: {
-        token: "YOUR_TOKEN",
+        token: "BOT_TOKEN",
         id: "BOT_USER_ID",
         mongodb: {
         enabled: true,
