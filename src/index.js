@@ -8,11 +8,11 @@ client.commands = new Collection();
 const functions = fs.readdirSync("./src/functions").filter(file => file.endsWith(".js"));
 const eventFiles = fs.readdirSync("./src/events").filter(file => file.endsWith(".js"));
 const commandFolders = fs.readdirSync("./src/commands");
-(async () => {
-    for (file of functions) {
-        require(`./functions/${file}`)(client);
-    }
-    client.handleEvents(eventFiles, "./src/events");
-    client.handleCommands(commandFolders, "./src/commands");
-    client.login(config.token)
+(async () => {for (file of functions) {require(`./functions/${file}`)(client);}
+console.log(chalk.green('[Discord API] Commands loaded.'));
+console.log(chalk.green('[Discord API] Events loaded.'));
+
+client.handleEvents(eventFiles, "./src/events");
+client.handleCommands(commandFolders, "./src/commands");
+client.login(config.token)
 })();
