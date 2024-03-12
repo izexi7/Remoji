@@ -23,14 +23,12 @@ module.exports = (client) => {
 
         (async () => {
             try {
-                console.log(chalk.green('[Discord API] Commands loaded.'));
-                console.log(chalk.green('[Discord API] Events loaded.'));
-
                 await rest.put(
                     Routes.applicationCommands(config.clientid), {
                         body: client.commandArray
                     },
                 );
+
             } catch (error) {
                 console.error(error);
             }
