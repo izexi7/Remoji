@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const fs = require('fs');
+const chalk = require('chalk');
 const config = require('../config.js');
 const client = new Discord.Client({intents: [Discord.GatewayIntentBits.Guilds,Discord.GatewayIntentBits.GuildMembers,Discord.GatewayIntentBits.GuildMessages,Discord.GatewayIntentBits.GuildMessageReactions,Discord.GatewayIntentBits.MessageContent,Discord.GatewayIntentBits.GuildInvites,],partials: [Discord.Partials,Discord.Partials.Message,Discord.Partials.GuildMember,Discord.Partials.ThreadMember,Discord.Partials.Reaction,Discord.Partials.GuildScheduledEvent,]});
 const { ActivityType, Events, Collection, EmbedBuilder, ButtonBuilder, ButtonStyle, ActionRowBuilder } = require('discord.js');
